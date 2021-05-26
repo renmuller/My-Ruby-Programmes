@@ -1,0 +1,102 @@
+#hashing a user's input
+puts "Text please: "
+text = gets.chomp
+
+words = text.split(" ")
+frequencies = Hash.new(0)
+words.each { |word| frequencies[word] += 1 }
+frequencies = frequencies.sort_by {|a, b| b }
+frequencies.reverse!
+frequencies.each { |word, frequency| puts word + " " + frequency.to_s }
+
+
+#creating a default value - will print 0 if a non-existent key is input
+
+puts "Enter song lyrics: "
+text = gets.chomp
+words = text.split
+
+frequencies = Hash.new(0)
+puts frequencies
+puts frequencies["kitty"]
+
+
+#My code to count the frequency of words in song lyrics
+
+puts "Enter song lyrics: "
+text = gets.chomp
+words = text.split
+
+frequencies = Hash.new(0)
+words.each { |word| frequencies[word] += 1}
+puts frequencies
+
+-----------------------------------------------------------------
+#splat
+#what up friends!
+def what_up(greeting, *friends)
+  friends.each { |friend| puts "#{greeting}, #{friend}!" }
+end
+
+what_up("What up", "Ian", "Zoe", "Zenas", "Eleanor")
+
+
+#sorting an unorganised array
+
+my_array = [3, 4, 8, 7, 1, 6, 5, 9, 2]
+my_array.sort![0]
+puts my_array
+
+#.sort makes a copy of original array
+#.sort! replaces the original.
+
+
+#sorting alphabetically
+
+books = ["Charlie and the Chocolate Factory", "War and Peace", "Utopia", "A Brief History of Time", "A Wrinkle in Time"]
+books.sort![0]
+puts books
+
+
+book_1 = "A Wrinkle in Time"
+book_2 = "A Brief History of Time"
+puts book_1<=>book_2
+
+
+#sort in ascending and descending order
+books = ["Charlie and the Chocolate Factory", "War and Peace", "Utopia", "A Brief History of Time", "A Wrinkle in Time"]
+
+books.sort! { |firstBook, secondBook| firstBook <=> secondBook }
+
+books.sort! { |firstBook, secondBook| secondBook <=> firstBook }
+puts books
+
+
+#Code to calculate sum
+
+numbers = [5, 2, 8]
+sum = 0
+numbers.each do |n|
+  sum += n
+end
+puts sum
+
+
+#Code to calculate number squared
+
+my_array = [1, 2, 3, 4, 5]
+my_array.each do |num|
+puts num * num
+end
+
+
+
+#My Code: sorting fruit array in reverse order
+
+fruits = ["orange", "apple", "banana", "pear", "grapes"]
+fruits.sort! do |first, second| second <=> first
+end
+puts fruits
+
+
+

@@ -1,0 +1,163 @@
+#My codes:
+
+puts "Go to bed" if tired == true   #prints Go to bed
+
+puts "Stay up" unless false  	    #prints Stay up
+			      #unless's default is 'true'
+
+
+#The Ternary condition expression:
+boolean ? Do this if true: Do this if false (e.g.)
+
+puts 3 < 4 ? "3 is less than 4!" : "3 is not less than 4."
+
+#My code:
+puts 4 < 7 ? "Yes, it's true!" : "No, it's false"
+
+
+#2 alternative case statements:
+
+     this:                           or this!!!!
+case language		   case language
+  when "JS"		     when "JS" then puts "Websites!"
+    puts "Websites!"	     when "Python" then puts "Science!"
+  when "Python"		     when "Ruby" then puts "Web apps!"
+    puts "Science!"	     else puts "I don't know!"
+  when "Ruby"		   end
+    puts "Web apps!"
+  else
+    puts "I don't know!"
+end
+
+
+#Assignment operators: ||= assigns a new variable if none
+			#has been set already
+
+favorite_book = nil
+puts favorite_book
+
+favorite_book ||= "Cat's Cradle"
+puts favorite_book
+
+favorite_book ||= "Why's (Poignant) Guide to Ruby"
+puts favorite_book
+
+favorite_book = "Why's (Poignant) Guide to Ruby"
+puts favorite_book
+
+
+#My Code: showing how assignment operators can't be
+#assigned more than once to the same variable. You must 
+#use regular variable assignment.
+
+# Write your code on line 2!
+favorite_language = nil
+puts favorite_language
+
+favorite_language ||= "English"
+puts favorite_language
+
+favorite_language ||= "German"
+puts favorite_language
+
+favorite_language = "Spanish"
+puts favorite_language
+
+
+#using .upto and .downto
+
+"A".upto("Z") { |alphabet| puts alphabet }
+
+
+#Concatenation and easier concatenation
+
+alphabet = ["a", "b", "c"]
+alphabet.push("d")
+
+caption = "A giraffe surrounded by "
+caption += "weezards!"
+
+
+
+#My code: even easier concatenation
+
+alphabet = ["a", "b", "c"]
+puts alphabet<<"d"# Update me!
+
+caption = "A giraffe surrounded by "
+puts caption<<"weezards!" # Me, too!
+
+
+
+#Simple concatenation
+
+drink = "espresso"
+"I love " + drink
+# ==> I love espresso
+"I love " << drink
+# ==> I love espresso
+
+
+#Concatenation of integers by first converting to strings.
+
+age = 26
+
+#1 way:
+"I am " + age.to_s + " years old."
+
+#Another way
+"I am " << age.to_s << " years old."
+
+
+#A better way to concatenate is by using string interpolation.
+
+"I love #{drink}."
+"I am #{age} years old."
+
+favorite_things = ["Ruby", "espresso", "candy"]
+
+puts "A few of my favorite things:"
+
+favorite_things.each do |thing|
+  puts "I love #{thing}!"
+end
+
+
+#Refactoring (to improve structure or appearance of code)
+
+#This:
+if 1 < 2
+  puts "One is less than two!"
+end
+
+#Refactored to: My Code - 
+puts "One is less than two!" if 1 < 2 == true
+
+
+#The Ternary operator. Simplifying true:false statements
+
+#From this:
+if 1 < 2
+  puts "One is less than two!"
+else
+  puts "One is not less than two."
+end
+
+#To this: My Code - 
+  puts 1 < 2 ? "One is less than two!" : "One is not less than two."
+
+
+#Refactoring from this:
+for i in (1..3)
+  puts "I'm a refactoring master!"
+end
+
+#To this - My code:
+3.times do puts "I'm a refactoring master!"
+end
+
+
+def square(num)
+  num * num
+end
+

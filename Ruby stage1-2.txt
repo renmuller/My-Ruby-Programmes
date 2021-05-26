@@ -1,0 +1,111 @@
+#Ruby
+
+# This is a single line comment in Ruby
+
+=begin
+This is a multiline comment in Ruby.
+I can take as many lines as needed.
+You end a multi-line comment in Ruby by typing:(see below)
+=end
+
+=begin
+puts in Ruby is like the print or println command EXCEPT
+it starts a new line after any puts statement.
+=end
+
+#myVar declares a variable
+myVar = 48
+
+my_num = 2+3
+puts my_num 
+
+# The code above will print out 5
+
+# .length prints the number of characters in the string
+myVar = "Karen Michelle Elizabeth Currie".length
+puts myVar
+# When you click Run it states 31
+
+=begin
+This is good for checking that a bank card entry
+has the correct amount of digits.
+=end
+
+#.reverse is similar to .length but is prints out everything backwards
+myVar = "Karen Michelle Elizabeth Currie".reverse
+puts myVar
+
+myVar = "Karen Muller".upcase
+puts myVar
+#prints in ALL CAPS
+
+myVar = "Karen Muller".downcase
+puts myVar
+#prints in lowercase.
+
+
+#Ruby code - please individualise
+
+print "What's your first name? "
+first_name = gets.chomp #gets asks for input from the user and starts a new line.
+#.chomp takes away that extra blank line.
+first_name.capitalize!
+
+print "What's your last name? "
+last_name = gets.chomp
+last_name.capitalize!
+
+print "What city are you from? "
+city = gets.chomp
+city.capitalize!
+
+print "What state or province are you from? "
+state = gets.chomp
+state.upcase!
+
+puts "Your name is #{first_name} #{last_name} and you're from #{city}, #{state}!"
+
+
+#This is my own version - and it works!
+print "What's your first name? "
+first_name = gets.chomp
+puts "Hi #{first_name}!"
+
+print "What's your last name? "
+last_name = gets.chomp
+puts "Your name is #{first_name} #{last_name}."
+
+print "What's the name of your city? "
+city = gets.chomp
+puts "Oh, #{city} sounds like a nice place!"
+
+print "What's the name of your province, state or county? (Please give abbreviation)"
+state = gets.chomp
+puts "Goodbye #{first_name} #{last_name} from #{city}, #{state}."
+
+
+#Final
+
+print "What's your first name? "
+first_name = gets.chomp
+first_name2 = first_name.capitalize
+first_name.capitalize!
+puts "Hi #{first_name}!"
+
+print "What's your last name? "
+last_name = gets.chomp
+last_name2 = last_name.capitalize
+last_name.capitalize!
+puts "Your name is #{first_name} #{last_name}."
+
+print "What's the name of your city? "
+city = gets.chomp
+city2 = city.capitalize
+city.capitalize!
+puts "Oh, #{city} sounds like a nice place!"
+
+print "What's the name of your province, state or county? (Please give abbreviation)"
+state = gets.chomp
+state2 = state.upcase
+state.upcase!
+puts "Goodbye #{first_name} #{last_name} from #{city}, #{state}."

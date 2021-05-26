@@ -1,0 +1,134 @@
+#reverse rev
+
+def alphabetize(arr, rev=false)
+  if rev
+    arr.sort { |item1, item2| item2 <=> item1 }
+  else
+    arr.sort { |item1, item2| item1 <=> item2 }
+  end
+end
+
+books = ["Heart of Darkness", "Code Complete", "The Lorax", "The Prophet", "Absalom, Absalom!"]
+
+puts "A-Z: #{alphabetize(books)}"
+puts "Z-A: #{alphabetize(books, true)}"
+
+
+#alphabetize method
+
+def alphabetize(arr, rev = false)
+  arr.sort!
+  if rev == true
+    arr.reverse!
+  else
+  	arr
+  end
+end
+
+numbers = [1,6,3,7,9]
+puts alphabetize(numbers)
+
+------------------------------------------------
+#iterating over hashes
+
+matz = { "First name" => "Yukihiro",
+  "Last name" => "Matsumoto",
+  "Age" => 47,
+  "Nationality" => "Japanese",
+  "Nickname" => "Matz"
+}
+matz.each do |key, value|
+  puts value
+
+end
+
+
+#symbols
+
+menagerie = { :foxes => 2,
+  :giraffe => 1,
+  :weezards => 17,
+  :elves => 1,
+  :canaries => 4,
+  :ham => 1
+}
+
+#symbols
+puts "string".object_id   #not a symbol
+puts "string".object_id   #not a symbol
+
+puts :symbol.object_id
+puts :symbol.object_id
+
+
+#My code: symbols
+my_first_symbol = :my_first_symbol
+
+
+#more symbols
+symbol_hash = {
+  :one => 1,
+  :zwei => 2,
+  :drei => 3,
+}
+
+
+#convert strings to symbols using .to_sym or .intern
+strings = ["HTML", "CSS", "JavaScript", "Python", "Ruby"]
+
+# Add your code below!
+symbols = []
+  strings.each do |s|
+    symbols.push (s.to_sym) #or symbols.push (s.intern)
+    end
+    print symbols
+
+
+#NEW symbol syntax
+
+movies = {
+  shawshank: "Thought provoking!" #the colon comes after
+    }                       #the word and no more rocket!
+
+
+#selecting specific symbols
+
+movie_ratings = {
+  memento: 3,
+  primer: 3.5,
+  the_matrix: 5,
+  truman_show: 4,
+  red_dawn: 1.5,
+  skyfall: 4,
+  alex_cross: 2,
+  uhf: 1,
+  lion_king: 3.5
+}
+good_movies = movie_ratings.select { |name, rating| rating >3 }
+
+
+#more methods and solutions
+
+movie_ratings = {
+  memento: 3,
+  primer: 3.5,
+  the_matrix: 3,
+  truman_show: 4,
+  red_dawn: 1.5,
+  skyfall: 4,
+  alex_cross: 2,
+  uhf: 1,
+  lion_king: 3.5
+}
+movie_ratings.each_key { |title| puts title }
+
+
+My code: film review
+
+movies = {
+  Selma: 4
+  Shrek: 3
+  Sleepless in Seattle: 2
+}
+puts "please enter film review: "
+choice = gets.chomp

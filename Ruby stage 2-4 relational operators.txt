@@ -1,0 +1,165 @@
+if 3<4
+  print "I'm getting printed because three is less than four!"
+end
+
+
+# My code:
+
+if 9>10
+  print "I'm getting printed because nine is less than ten!"
+else
+  print "I will get printed!"
+end
+
+
+# the unless statement
+
+hungry = false
+
+unless hungry
+  puts "I'm writing Ruby programs!"
+else
+  puts "Time to eat!"
+end
+
+#the and operator (&&)
+
+# boolean_1 = 77 < 78 && 77 < 77
+boolean_1 = false
+
+# boolean_2 = true && 100 >= 100
+boolean_2 = true
+
+# boolean_3 = 2**3 == 8 && 3**2 == 9
+boolean_3 = true
+
+
+# the or operator aka the inclusive or (||)
+=begin
+true || true # => true
+true || false # => true
+false || true # => true
+false || false # => false
+=end
+
+
+# Combining Boolean operators
+
+# boolean_1 = (3 < 4 || false) && (false || true)
+boolean_1 = true
+
+# boolean_2 = !true && (!true || 100 != 5**2)
+boolean_2 = false
+
+# boolean_3 = true || !(true || false)
+boolean_3 = true
+
+=begin
+So far I've learned:
+How to use if, else, and elsif
+How to use comparators / relational operators like ==, !=, <, <=, >, and >=
+How to use boolean / logical operators like &&, ||, and !
+=end
+
+#My own code using if, else and elsif
+
+a = 5
+b = 10
+
+if a < b
+  print "a is less than b"
+elsif a > b
+  print "a is greater than b"
+else
+  print "a is equal to b"
+end
+
+
+#My unless code:
+
+tired = false
+print "Keep studying!" unless tired
+
+
+#My code using comparators/relational operators
+
+# test_1 should be false
+test_1 = 11 == 12
+
+# test_2 = should be false
+test_2 = 11 > 12
+
+# test_3 = should be true
+test_3 = 12 != 11
+
+
+#My Boolean operator code:
+
+# test_1 should be true
+test_1 = (11 != 12) && (11 <= 12)
+
+# test_2 = should be true
+test_2 = (11 == 12) || (12 > 11)
+
+# test_3 = should be false
+test_3 = !(true)
+
+
+#Code to change a letter in a string
+
+print "Thtring, pleathe!: "
+user_input = gets.chomp
+user_input.downcase!
+
+if user_input.include? "s"
+  user_input.gsub!(/s/, "th")
+else
+  puts "Nothing to do here!"
+end
+  
+puts "Your string is: #{user_input}"
+
+
+=begin
+Use .downcase to change user string so you don't have to
+write separate lines of code for 's' and 'S'.
+Add '!' so string will be modified in place otherwise
+Ruby will create a copy and modify that instead.
+=end
+
+
+#My if branch code, part1
+
+print "Write something here: "
+user_input = gets.chomp
+user_input.downcase! 
+
+if user_input.include? "s"
+  print "This string contains an 's'"
+end
+
+
+#The gsub!() method stands for global substitution
+#Note: do not put a space between gsub! and parantheses!
+
+
+#My code that adds a lisp to a user's sentence
+
+# i.e. I seek to sip a simmering South Sri Lankan soup!
+
+print "Write something here: "
+user_input = gets.chomp
+user_input.downcase! 
+
+if user_input.include? "s"
+  user_input.gsub!(/s/, "th")
+
+else
+  puts "There are no 's''s in this string. Please enter a phrase that contains the letter 'S'"
+end
+
+puts "Here is your new sentence: #{user_input}"
+
+
+
+
