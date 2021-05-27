@@ -22,7 +22,7 @@ puts my_num
 # The code above will print out 5
 
 # .length prints the number of characters in the string
-myVar = "Karen Michelle Elizabeth Currie".length
+myVar = "Karen MidName1 midName2 MyLastName".length
 puts myVar
 # When you click Run it states 31
 
@@ -32,7 +32,7 @@ has the correct amount of digits.
 =end
 
 #.reverse is similar to .length but is prints out everything backwards
-myVar = "Karen Michelle Elizabeth Currie".reverse
+myVar = "Karen MidName1 midName2 MyLastName".reverse
 puts myVar
 
 myVar = "Karen Muller".upcase
